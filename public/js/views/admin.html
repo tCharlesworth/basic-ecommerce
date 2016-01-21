@@ -1,0 +1,19 @@
+<h1 style="text-align: center">Admin Page</h1>
+
+<div class="wrapper">
+<input name="name" type="text" placeholder="Item Name" ng-model="addName">
+<br />
+<input name="description" type="text" placeholder="Item Description" ng-model="addDescription">
+<br />
+<input name="price" type="text" placeholder="Item Price" ng-model="addPrice">
+<br />
+<button class="button" ng-click="submitProduct({name: addName, description: addDescription, price: addPrice})">Add Product</button>
+</div>
+
+<h2 style="text-align: center">Products List</h2>
+
+<div class="products" ng-repeat="product in products">
+    <span>{{product.name}}</span><span>{{product.description}}</span><span>${{product.price}}</span>
+    <button class="button" ng-click="editProduct(product._id)">Edit</button>
+    <button class="button" ng-click="removeProduct(product._id)">Remove</button>
+</div>

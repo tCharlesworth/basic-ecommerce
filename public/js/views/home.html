@@ -1,0 +1,8 @@
+<h1 style="text-align: center">Pretty In Pink</h1>
+
+<div class='shopping-cart'>Shopping Cart</div>
+
+<div class="products" ng-repeat="product in products">
+<span>{{product.name}}</span><span>{{product.description}}</span><span>${{product.price}}</span>
+    <button class="button" >Add to Cart</button>
+</div>
